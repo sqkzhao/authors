@@ -28,7 +28,7 @@ export default () => {
         <div>
             <Link to="/new">Add An Author</Link>
             <p>We have quotes by:</p>
-            <table>
+            <table className="table">
                 <thead>
                     <tr>
                         <th>Author</th>
@@ -40,8 +40,8 @@ export default () => {
                         return <tr key={i}>
                             <td>{author.name}</td>
                             <td>
-                                <button onClick={editAuthor} id={author._id}>Edit</button>
-                                <button onClick={deleteAuthor} id={author._id}>Delete</button>
+                                <button onClick={editAuthor} id={author._id} className="btn btn-primary btn-sm mr-2">Edit</button>
+                                <button onClick={deleteAuthor} id={author._id} className="btn btn-danger btn-sm">Delete</button>
                             </td>
                         </tr>
                     })}
